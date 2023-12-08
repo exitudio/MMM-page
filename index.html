@@ -148,10 +148,10 @@
             <div class="row py-lg-5">
                 <div class="col-lg-8 col-md-8 mx-auto">
                     <h1>MMM: Generative <u>M</u>asked <u>M</u>otion <u>M</u>odel</h1>
-                    <h5>Ekkasit Pinyoanuntapong†, Pu Wang†, Minwoo Lee†, Chen Chen°</h5>
+                    <h5>Ekkasit Pinyoanuntapong°, Pu Wang°, Minwoo Lee°, Chen Chen†</h5>
                     <p>
-                        <small class="text-muted">†University of North Carolina at Charlotte, </small>
-                        <small class="text-muted">°University of Central Florida</small>
+                        <small class="text-muted">°University of North Carolina at Charlotte, </small>
+                        <small class="text-muted">†University of Central Florida</small>
                     </p>
                     <a type="button" class="btn btn-outline-secondary" href="http://arxiv.org/abs/2312.03596">
                         <svg width="16" height="20">
@@ -179,8 +179,22 @@
                                 d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm10.798 11c-.453-1.27-1.76-3-4.798-3-3.037 0-4.345 1.73-4.798 3H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1z">
                             </path>
                         </svg>
-                        Demo
+                        Demo (coming soon)
                     </a>
+                </div>
+
+                <div class="d-flex justify-content-center" style="padding-top: 50px;">
+                    <img src="./assets/head.jpg" class="img-fluid" alt="Responsive image">
+                </div>
+                <div>
+                    (a) MMM generates motion from text in only 0.081 seconds per sentence and achieves lowest FID score
+                    at 0.089 on HumanML3D, outperforming current state-of-the-art methods (the closer to the
+                    origin the better) while maintaining editable
+                    ability for multiple editing tasks e.g., (b) upper body editing, (c) motion in-betweening, and (d)
+                    long sequence generation. <span style="color:#ff0000">The red indicates generated parts</span> and
+                    <span style="color:#0000ff">the blue refers to conditioned parts</span>. <span
+                        style="color: #00ff00">Green indicates the transition</span> between the short motion sequences
+                    with different text prompts for long motion sequence generation.
                 </div>
             </div>
         </section>
@@ -188,6 +202,7 @@
 
         <div class="album py-5 bg-body-tertiary">
             <div class="container">
+
                 <h3>Abstract</h3>
                 <div>Recent advances in text-to-motion generation using diffusion and autoregressive models have shown
                     promising results. However, these models often suffer from a trade-off between real-time
@@ -218,12 +233,20 @@
         <div class="album py-5">
             <div class="container">
                 <h3>Fast, High Quality, and Editable</h3>
-                Our MMM achieves the highest quality with a FID score of 0.089 and the fastest performance, averaging
+                <!-- Our MMM achieves the highest quality with a FID score of 0.089 and the fastest performance, averaging
                 0.081 seconds for Average Inference Time per Sentence (AITS), when compared to state-of-the-art (SOTA)
                 methods on the HumanML3D dataset, while preserving editability. The model closer to the origin is
-                better. All tests are performed on a single NVIDIA RTX A5000.
+                better. All tests are performed on a single NVIDIA RTX A5000. -->
+
+                Comparison of the inference speed and quality of generation on text-to-motion along with the editable
+                capability of each model. "<span style="color:#ff0000"><b>✓</b></span>" means editable while "<b>✗</b>"
+                is not and
+                "<b>-</b>" refers to has-capability but no application provided. We calculate the Average
+                Inference Time per Sentence (AITS) on the test set of HumanML3D without model or data loading
+                parts. All tests are performed on a single NVIDIA RTX A5000.
                 <div class="d-flex justify-content-center">
-                    <img src="./assets/speed_all.jpg" class="img-fluid" alt="Responsive image" width="500">
+                    <!-- <img src="./assets/speed_all.jpg" class="img-fluid" alt="Responsive image" width="500"> -->
+                    <img src="./assets/table.jpg" class="img-fluid" alt="Responsive image" width="500">
                 </div>
             </div>
         </div>
