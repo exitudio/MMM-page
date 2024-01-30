@@ -135,6 +135,12 @@
             height: 24px;
             width: 24px;
         }
+
+        .mmm-card {
+            border-color: red;
+            border-style: solid;
+            border-width: 2px;
+        }
     </style>
 
 
@@ -279,7 +285,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        <h3>Text to Motion:</h3>
+                        <h3>Text to Motion 1:</h3>
                         <h6>"a person walks forward then turns completely around and does a cartwheel"</h6>
                     </div>
                 </div>
@@ -290,7 +296,7 @@
                             <video id="text-to-motion_mmm" autoplay controls muted loop playsinline height="100%">
                                 <source src="./assets/text_to_motion_mmm.mp4" type="video/mp4">
                             </video>
-                            <div class="card-body">
+                            <div class="card-body mmm-card">
                                 <p class="card-text">MMM (our)</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <small class="text-body-secondary">(Realistic Motion)</small>
@@ -354,6 +360,82 @@
                         </div>
                     </div>
                 </div>
+                <div class="row" style="margin-top: 100px;">
+                    <div class="col">
+                        <h3>Text to Motion 2:</h3>
+                        <h6>"a man walks forward, stumbles to the right, and then regains his balance and keeps walking forwards."</h6>
+                    </div>
+                </div>
+
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <video id="text-to-motion_mmm" autoplay controls muted loop playsinline height="100%">
+                                <source src="./assets/stumble/stumble_mmm.mp4" type="video/mp4">
+                            </video>
+                            <div class="card-body mmm-card">
+                                <p class="card-text">MMM (our)</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-body-secondary">(Stronger correlation to text than ground thruth is observed, as it has seen a many similar text-motion relationships during training.)</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <video id="text-to-motion_gt" autoplay controls muted loop playsinline height="100%">
+                                <source src="./assets/stumble/stumble_gt.mp4" type="video/mp4">
+                            </video>
+                            <div class="card-body">
+                                <p class="card-text">Ground Truth</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-body-secondary"></small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <video id="text-to-motion_t2mgpt" autoplay controls muted loop playsinline height="100%">
+                                <source src="./assets/stumble/stumble_t2mgpt.mp4" type="video/mp4">
+                            </video>
+                            <div class="card-body">
+                                <p class="card-text">T2M-GPT</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-body-secondary">(Stumbles to the left instead of right)</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <video id="text-to-motion_mld" autoplay controls muted loop playsinline height="100%">
+                                <source src="./assets/stumble/stumble_mld.mp4" type="video/mp4">
+                            </video>
+                            <div class="card-body">
+                                <p class="card-text">MLD</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-body-secondary">(Not "stumble" motion)</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <video id="text-to-motion_mdm" autoplay controls muted loop playsinline height="100%">
+                                <source src="./assets/stumble/stumble_mdm.mp4" type="video/mp4">
+                            </video>
+                            <div class="card-body">
+                                <p class="card-text">MDM</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-body-secondary">(Not "stumble" motion)</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -377,7 +459,7 @@
                             <video id="inbtween_mmm" autoplay controls muted loop playsinline height="100%">
                                 <source src="./assets/in_between_mmm2.mp4" type="video/mp4">
                             </video>
-                            <div class="card-body">
+                            <div class="card-body mmm-card">
                                 <p class="card-text">MMM (our)</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <small class="text-body-secondary">(Realistic Motion)</small>
@@ -417,7 +499,7 @@
                             <video id="inbtween_mmm" autoplay controls muted loop playsinline height="100%">
                                 <source src="./assets/in_between_mmm.mp4" type="video/mp4">
                             </video>
-                            <div class="card-body">
+                            <div class="card-body mmm-card">
                                 <p class="card-text">MMM (our)</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <small class="text-body-secondary">(Realistic Motion)</small>
@@ -462,7 +544,7 @@
 
                             <iframe src="./assets/mmm_upper.html" title="description"
                                 style="overflow:hidden;height:600px;width:100%" height="100%" width="100%"></iframe>
-                            <div class="card-body">
+                            <div class="card-body mmm-card">
                                 <p class="card-text" style="color:#ff0000"><i>[Click play for normal speed]</i></p>
                                 <p class="card-text">MMM (our)</p>
                                 <div class="d-flex justify-content-between align-items-center">
@@ -511,7 +593,7 @@
                             <video id="longrange_true" autoplay controls muted loop playsinline height="100%">
                                 <source src="./assets/longrange_true.mp4" type="video/mp4">
                             </video>
-                            <div class="card-body">
+                            <div class="card-body mmm-card">
                                 <p class="card-text">MMM (our)</p>
                                 <!-- <div class="d-flex justify-content-between align-items-center">
                                     <small class="text-body-secondary">(Realistic Motion)</small>
@@ -540,7 +622,7 @@
                             <video id="complete2" autoplay controls muted loop playsinline height="100%">
                                 <source src="./assets/complete2.mp4" type="video/mp4">
                             </video>
-                            <div class="card-body">
+                            <div class="card-body mmm-card">
                                 <h6 class="card-text">MMM (our)</h6>
                                 <p>Completing <u><b>first</b></u> 50% motion based on the text <span
                                         style='color:#ff0000'>“a person
@@ -558,7 +640,7 @@
                             <video id="complete1" autoplay controls muted loop playsinline height="100%">
                                 <source src="./assets/completion1.mp4" type="video/mp4">
                             </video>
-                            <div class="card-body">
+                            <div class="card-body mmm-card">
                                 <h6 class="card-text">MMM (our)</h6>
                                 <p>Completing <u><b>last</b></u> 50% motion based on the text <span
                                         style='color:#ff0000'>“a person
@@ -591,12 +673,30 @@
                             <video id="outpainting" autoplay controls muted loop playsinline height="100%">
                                 <source src="./assets/outpainting.mp4" type="video/mp4">
                             </video>
-                            <div class="card-body">
+                            <div class="card-body mmm-card">
                                 <h6 class="card-text">MMM (our)</h6>
                                 <p>Generating first 25% and last 25% of motion of based on the text <span
                                         style='color:#ff0000'>“A person sits down”</span> conditioned on 50% motion in
                                     the middle of motion of <span style='color:#0000ff'>“a person is running in place at
                                         a medium pace.”</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow-sm">
+
+                            <video id="outpainting" autoplay controls muted loop playsinline height="100%">
+                                <source src="./assets/outpaint_forward_backward.mp4" type="video/mp4">
+                            </video>
+                            <div class="card-body mmm-card">
+                                <h6 class="card-text">MMM (our)</h6>
+                                <p>Generating first 25% and last 25% of motion of based on the text <span
+                                        style='color:#ff0000'>“person walks backward.”</span> conditioned on 50% motion
+                                    in
+                                    the middle of motion of <span style='color:#0000ff'>“a person walks forward in a
+                                        straight line.”</span>
                                 </p>
                             </div>
                         </div>
